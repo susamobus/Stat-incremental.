@@ -1,5 +1,6 @@
 window.setInterval(function() {
     document.getElementById("points").innerHTML = points
+    document.getElementById("multiplier").innerHTML = multiplier
     document.getElementById("SliderSelector").style.left = autosavespeed + "%"
     document.getElementById("SliderValue").innerHTML = autosavespeed
 },50);
@@ -7,6 +8,9 @@ window.setInterval(function() {
 window.setInterval(function() {
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
+    }
+    if (points >= 100) {
+        document.getElementById("MultiSubTab").style.display = "inline"
     }
 },150)
 
