@@ -24,8 +24,10 @@ function MultiUnlock() {
 }
 
 function AutoPoints() {
-    if (points >= 10) {
-        points -= 10
-        autopoints = true
+    if (autopoints == false) {
+        if (points >= 10) {
+            points -= 10
+            autopoints = true
+        }
     }
 }
