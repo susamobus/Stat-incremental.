@@ -1,6 +1,8 @@
 var points = 0
 var multiplier = 1
+var rebirth = 0
 var multiunlock = false
+var rebirthunlock = false
 var autopoints = false
 var isnew = true
 
@@ -12,7 +14,7 @@ function Start() {
 function Multi() {
     if (points >= 50) {
         points -= 50
-        multiplier += 1
+        multiplier += (1 * (rebirth + 1))
     }
 }
 
@@ -20,6 +22,13 @@ function MultiUnlock() {
     if (points >= 100) {
         points -= 100
         multiunlock = true
+    }
+}
+
+function RebirthUnlock() {
+    if (multiplier >= 50) {
+        multiplier -= 50
+        rebirthunlock = true
     }
 }
 

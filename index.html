@@ -17,12 +17,13 @@
         <br>
         <br>
         <div class="tab" id="layers" style="display: block">
-            <button class="SubTabBtn" onclick="SubTab('points')" style="display: inline">Points</button>
-            <button class="SubTabBtn" id="multisubtab" style="border-color: red; color: red" onclick="SubTab('multi')">Multiplier</button>
+            <button class="SubTabBtn" id="pointsubtabbtn" onclick="SubTab('pointssubtab')" style="display: inline">Points</button>
+            <button class="SubTabBtn" id="multisubtabbtn" style="border-color: red; color: red" onclick="SubTab('multisubtab')">Multiplier</button>
+            <button class="SubTabBtn" id="rebirthsubtabbtn" style="border-color: blue; color: blue" onclick="SubTab('rebirthsubtab')">Rebirth</button>
             <br>
             <br>
-            <div class="subtab" id="points" style="display: block">
-                <button class="LayerBtn" onclick="Start()">Get 1 Point</button>
+            <div class="subtab" id="pointssubtab" style="display: block">
+                <button class="LayerBtn" id="pointbtn" onclick="Start()">Get 1 Point</button>
                 <br>
                 <br>
                 <button class="LayerUpgradeBtn" id="autopoints" onclick="AutoPoints()">Generate points automatically (Costs 10 Points)</button>
@@ -30,11 +31,17 @@
                 <br>
                 <button class="LayerUnlockBtn" id="multiunlockbtn" onclick="MultiUnlock()">Unlock Multiplier (Requires 100 points, <span id="pointsleft">Loading</span> points left)</span></button>
             </div>
-            <div class="subtab" id="multi">
-                <span class="MultiDisplay" style="color: red">Multiplier: x<span id="multiplier">Loading</span></span>
+            <div class="subtab" id="multisubtab" style="background-color: red">
+                <span class="LayerDisplay" style="color: red">Multiplier: x<span id="multiplier">Loading</span></span>
                 <br>
                 <br>
                 <button class="LayerBtn" id="multibtn" onclick="Multi()">Get Multi (Cost 50 Points)</button>
+                <br>
+                <br>
+                <button class="LayerUnlockBtn" id="rebirthunlockbtn" onclick="RebirthUnlock()">Unlock Rebirth (Requires 50 multiplier, <span id="multileft">Loading</span> multiplier left)</button>
+            </div>
+            <div class="subtab" id="rebirthsubtab" style="background-color: blue">
+                <span class="LayerDisplay" id="rebirth">Loading</span>
             </div>
         </div>
 

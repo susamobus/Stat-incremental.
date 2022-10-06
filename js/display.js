@@ -1,6 +1,7 @@
 window.setInterval(function() {
     document.getElementById("points").innerHTML = points
     document.getElementById("multiplier").innerHTML = multiplier
+    document.getElementById("rebirth").innerHTML = rebirth
     document.getElementById("SliderSelector").style.left = autosavespeed + "%"
     document.getElementById("SliderValue").innerHTML = autosavespeed
 },50);
@@ -9,13 +10,19 @@ window.setInterval(function() {
     Check2("pointsleft", "multiunlockbtn", 100, points)
     Check("autopoints", 10, points)
     Check("multibtn", 50, points)
+    Check2("multileft", "rebirthunlockbtn", 50, multiplier)
 
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
 
     Display("autopoints", autopoints, true)
-    BtnUpd("multisubtab", "multiunlockbtn", multiunlock)
+    Display("pointbtn", autopoints, true)
+    if (autopoints == true) {
+        Display("pointsubtabbtn", multiunlock, true)
+    }
+    BtnUpd("multisubtabbtn", "multiunlockbtn", multiunlock)
+    BtnUpd("rebirthsubtabbtn", "rebirthunlockbtn", rebirthunlock)
 },150)
 
 window.setInterval(function() {
