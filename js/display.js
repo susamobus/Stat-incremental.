@@ -16,8 +16,14 @@ window.setInterval(function() {
     Display("multiunlockbtn", multiunlock, true)
 },150)
 
+window.setInterval(function() {
+    if (autopoints == true) {
+        points += (1 * multiplier)
+    }
+},200)
+
 function Check(id, id2, req, stat) {
-    if (stat > req) {
+    if (stat >= req) {
         document.getElementById(id).innerHTML = 0
         document.getElementById(id2).style.borderColor = "lime"
     } else {

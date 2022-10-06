@@ -12,6 +12,9 @@ Save : function() {
             isnew: isnew,
             multiunlock: multiunlock,
         },
+        layerauto: {
+            autopoints: autopoints
+        },
         settings: {
             autosavespeed: autosavespeed,
         }
@@ -25,6 +28,7 @@ Load : function() {
     if (typeof data.layers.multiplier !== "undefined") multiplier = data.layers.multiplier
     if (typeof data.layerunlocks.isnew !== "undefined") isnew = data.layerunlocks.isnew;
     if (typeof data.layerunlocks.multiunlock !== "undefined") multiunlock = data.layerunlocks.multiunlock;
+    if (typeof data.layerauto.autopoints !== "undefined") autopoints = data.layerauto.autopoints;
     if (typeof data.settings.autosavespeed !== "undefined") autosavespeed = data.settings.autosavespeed;
 },
 
@@ -33,6 +37,7 @@ HardReset : function() {
     multiplier = 1
     isnew = true
     multiunlock = false
+    autopoints = false
     savefunctions.Save()
     location.reload();
 }

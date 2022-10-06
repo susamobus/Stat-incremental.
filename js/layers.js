@@ -1,6 +1,7 @@
 var points = 0
 var multiplier = 1
 var multiunlock = false
+var autopoints = false
 var isnew = true
 
 function Start() {
@@ -19,5 +20,12 @@ function MultiUnlock() {
     if (points >= 100) {
         points -= 100
         multiunlock = true
+    }
+}
+
+function AutoPoints() {
+    if (points >= 10) {
+        points -= 10
+        autopoints = true
     }
 }
