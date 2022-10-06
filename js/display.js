@@ -4,6 +4,12 @@ window.setInterval(function() {
     document.getElementById("SliderValue").innerHTML = autosavespeed
 },50);
 
+window.setInterval(function() {
+    if (isnew == false) {
+        document.getElementsByClassName("points")[0].style.display = "inline"
+    }
+},150)
+
 function Tab(id) {
     var tabs = document.getElementsByClassName("tab");
     var tab;

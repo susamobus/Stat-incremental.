@@ -1,6 +1,7 @@
 var points = 0
-var pointdisplay = false
+var isnew = true
 
 function Start() {
     points += 1
+    isnew = false
 }
