@@ -6,7 +6,7 @@ window.setInterval(function() {
 
 window.setInterval(function() {
     if (isnew == false) {
-        document.getElementsByClassName("points").item(0).style.display = "block"
+        document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
 },150)
 
