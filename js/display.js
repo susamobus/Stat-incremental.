@@ -22,3 +22,16 @@ function Tab(id) {
         }
     }
 }
+
+function SubTab(id) {
+    var subtabs = document.getElementsByClassName("subtab");
+    var subtab;
+    for (var i = 0; i < subtabs.length; i++) {
+        subtab = subtabs.item(i);
+        if (subtab.id === id) {
+            subtab.style.display = "block";
+        } else {
+            subtab.style.display = "none";
+        }
+    }
+}

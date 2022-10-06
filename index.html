@@ -17,7 +17,19 @@
         <br>
         <br>
         <div class="tab" id="layers" style="display: block">
-            <button class="LayerBtn" onclick="Start()">Start</button><br>
+            <button class="SubTabBtn" onclick="SubTab(points)">Points</button>
+            <button class="SubTabBtn" style="border-color: red" onclick="SubTab(multi)">Multiplier</button>
+            <br>
+            <br>
+            <div class="subtab" id="points" style="display: block">
+                <button class="LayerBtn" onclick="Start()">Start</button><br>
+            </div>
+            <div class="subtab" id="multi">
+                <span class="MultiDisplay" style="color: red">Multiplier: <span id="multiplier">Loading</span></span>
+                <br>
+                <br>
+                <button class="LayerBtn" style="background-color: red" onclick="Multi()"></button>
+            </div>
         </div>
 
         <div class="tab" id="settings">

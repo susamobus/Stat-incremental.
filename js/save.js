@@ -6,6 +6,7 @@ Save : function() {
     save = {
         layers: {
             points: points,
+            multiplier: multiplier
         },
         settings: {
             autosavespeed: autosavespeed,
@@ -20,12 +21,14 @@ Save : function() {
 Load : function() {
     data = JSON.parse(localStorage.getItem("save"));
     if (typeof data.layers.points !== "undefined") points = data.layers.points;
+    if (typeof data.layers.multiplier !== "undefined") multiplier = data.layers.multiplier
     if (typeof data.settings.autosavespeed !== "undefined") autosavespeed = data.settings.autosavespeed;
     if (typeof data.others.isnew !== "undefined") isnew = data.others.isnew;
 },
 
 HardReset : function() {
     points = 0
+    multiplier = 0
     isnew = true
     savefunctions.Save()
     location.reload();

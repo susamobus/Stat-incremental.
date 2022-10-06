@@ -10,6 +10,10 @@ body {
     display: none;
 }
 
+.subtab {
+    display: none
+}
+
 .PointDisplay {
     font-size: 30px;
     color: lime;
@@ -24,6 +28,16 @@ body {
     border-radius: 10px;
     height: 60px;
     width: 120px;
+}
+
+.SubTabBtn {
+    background-color: black;
+    border-color: white;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 80px;
 }
 
 .LayerBtn {
