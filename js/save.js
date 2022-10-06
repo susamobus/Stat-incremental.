@@ -44,7 +44,7 @@ Save : function() {
 Load : function() {
     data = JSON.parse(localStorage.getItem("save"));
     function LoadStat(path, stat) {
-        if (typeof path !== "undefined") stat = path;
+        stat = path
     };
     LoadStat(data.layers.points, points)
     LoadStat(data.layers.multiplier, multiplier)
