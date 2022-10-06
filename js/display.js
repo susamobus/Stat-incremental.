@@ -9,7 +9,7 @@ window.setInterval(function() {
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
-    if (points >= 100) {
+    if (multiunlock == true) {
         document.getElementById("MultiSubTab").style.display = "inline"
     }
 },150)
