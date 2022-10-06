@@ -33,11 +33,11 @@ body {
 .SubTabBtn {
     background-color: black;
     border-color: white;
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px;
     border-radius: 10px;
-    height: 40px;
-    width: 80px;
+    height: 50px;
+    width: 100px;
 }
 
 .LayerBtn {
