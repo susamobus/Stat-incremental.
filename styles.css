@@ -52,7 +52,7 @@ body {
     width: 120px;
 }
 
-.LayerUnlockBtn {
+.LayerUpgradeBtn {
     background-color: white;
     font-size: 15px;
     color: black;
@@ -60,7 +60,18 @@ body {
     padding: 10px;
     border-radius: 10px;
     height: 50px;
-    width: 250px;
+    width: 120px;
+}
+
+.LayerUnlockBtn {
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    border-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 320px;
 }
 
 #Slider {

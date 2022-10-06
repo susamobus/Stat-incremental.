@@ -6,23 +6,35 @@ window.setInterval(function() {
 },50);
 
 window.setInterval(function() {
-    if (points > 100) {
-        document.getElementById("pointsleft").innerHTML = 0
-        document.getElementById("multiunlockbtn").style.borderColor = "lime"
-    } else {
-        document.getElementById("pointsleft").innerHTML = 100 - points
-        document.getElementById("multiunlockbtn").style.borderColor = "red"
-    }
+    Check("pointsleft", "multiunlockbtn", 100, points)
 
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
 
-    if (multiunlock == true) {
-        document.getElementById("multisubtab").style.display = "inline"
-        document.getElementById("multiunlockbtn").style.display = "none"
-    }
+    Display("multisubtab", multiunlock, false)
+    Display("multiunlockbtn", multiunlock, true)
 },150)
+
+function Check(id, id2, req, stat) {
+    if (stat > req) {
+        document.getElementById(id).innerHTML = 0
+        document.getElementById(id2).style.borderColor = "lime"
+    } else {
+        document.getElementById(id).innerHTML = req - stat
+        document.getElementById(id2).style.borderColor = "red"
+    }
+}
+
+function Display(id, stat, inv) {
+    if (stat == true) {
+        if (inv == false) {
+        document.getElementById(id).style.display = "inline"
+        } else {
+            document.getElementById(id).style.display = "none"
+        }
+    }
+}
 
 function Tab(id) {
     var tabs = document.getElementsByClassName("tab");
