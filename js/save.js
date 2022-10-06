@@ -8,14 +8,31 @@ Save : function() {
             points: points,
             multiplier: multiplier,
             rebirth: rebirth,
+            ultrarebirth: ultrarebirth,
+            prestige: prestige,
         },
         layerunlocks: {
             isnew: isnew,
             multiunlock: multiunlock,
             rebirthunlock: rebirthunlock,
+            urebirthunlock: urebirthunlock,
         },
         layerauto: {
             autopoints: autopoints,
+            automulti: automulti,
+        },
+        tokens: {
+            tokens: tokens,
+            supertokens: supertokens,
+            megatokens: megatokens,
+        },
+        tokensunlock: {
+            tokensunlock: tokensunlock,
+            stokensunlock: stokensunlock,
+            mtokensunlock: mtokensunlock,
+        },
+        tokensauto: {
+            autotokens: autotokens,
         },
         settings: {
             autosavespeed: autosavespeed,
@@ -26,24 +43,50 @@ Save : function() {
 
 Load : function() {
     data = JSON.parse(localStorage.getItem("save"));
-    if (typeof data.layers.points !== "undefined") points = data.layers.points;
-    if (typeof data.layers.multiplier !== "undefined") multiplier = data.layers.multiplier;
-    if (typeof data.layers.rebirth !== "undefined") rebirth = data.layers.rebirth
-    if (typeof data.layerunlocks.isnew !== "undefined") isnew = data.layerunlocks.isnew;
-    if (typeof data.layerunlocks.multiunlock !== "undefined") multiunlock = data.layerunlocks.multiunlock;
-    if (typeof data.layerunlocks.rebirthunlock !== "undefined") rebirthunlock = data.layerunlocks.rebirthunlock;
-    if (typeof data.layerauto.autopoints !== "undefined") autopoints = data.layerauto.autopoints;
-    if (typeof data.settings.autosavespeed !== "undefined") autosavespeed = data.settings.autosavespeed;
+    function LoadStat(path, stat) {
+        if (typeof path !== "undefined") stat = path;
+    };
+    LoadStat(data.layers.points, points)
+    LoadStat(data.layers.multiplier, multiplier)
+    LoadStat(data.layers.rebirth, rebirth)
+    LoadStat(data.layers.ultrarebirth, ultrarebirth)
+    LoadStat(data.layers.prestige, prestige)
+    LoadStat(data.layerunlocks.multiunlock, multiunlock)
+    LoadStat(data.layerunlocks.rebirthunlock, rebirthunlock)
+    LoadStat(data.layerunlocks.urebirthunlock, urebirthunlock)
+    LoadStat(data.layerunlocks.prestigeunlock, prestigeunlock)
+    LoadStat(data.layerauto.autopoints, autopoints)
+    LoadStat(data.layerauto.automulti, automulti)
+    LoadStat(data.tokens.tokens, tokens)
+    LoadStat(data.tokens.supertokens, supertokens)
+    LoadStat(data.tokens.megatokens, megatokens)
+    LoadStat(data.tokensunlock.tokensunlock, tokensunlock)
+    LoadStat(data.tokensunlock.stokensunlock, stokensunlock)
+    LoadStat(data.tokensunlock.mtokensunlock, mtokensunlock)
+    LoadStat(data.tokensauto.autotokens, autotokens)
+    LoadStat(data.settings.autosavespeed, autosavespeed)
 },
 
 HardReset : function() {
     points = 0
     multiplier = 1
     rebirths = 0
+    ultrarebirth = 0
+    prestige = 0
     isnew = true
     multiunlock = false
     rebirthunlock = false
+    urebirthunlock = false
+    prestigeunlock = false
     autopoints = false
+    automulti = false
+    tokens = 0
+    supertokens = 0
+    megatokens = 0
+    tokensunlock = false
+    stokensunlock = false
+    mtokensunlock = false
+    autotokens = false
     savefunctions.Save()
     location.reload();
 }

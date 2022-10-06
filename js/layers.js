@@ -1,9 +1,14 @@
 var points = 0
 var multiplier = 1
 var rebirth = 0
+var ultrarebirth = 0
+var prestige = 0
 var multiunlock = false
 var rebirthunlock = false
+var urebirthunlock = false
+var prestigeunlock = false
 var autopoints = false
+var automulti = false
 var isnew = true
 
 function Start() {
