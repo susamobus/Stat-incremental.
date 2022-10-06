@@ -10,12 +10,14 @@ window.setInterval(function() {
         document.getElementById("pointsleft").innerHTML = 0
         document.getElementById("multiunlockbtn").style.borderColor = "lime"
     } else {
-        document.getElementById("pointsleft") = 100 - points
+        document.getElementById("pointsleft").innerHTML = 100 - points
         document.getElementById("multiunlockbtn").style.borderColor = "red"
     }
+
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
+
     if (multiunlock == true) {
         document.getElementById("multisubtab").style.display = "inline"
         document.getElementById("multiunlockbtn").style.display = "none"
