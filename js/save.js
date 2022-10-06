@@ -16,6 +16,7 @@ Save : function() {
             multiunlock: multiunlock,
             rebirthunlock: rebirthunlock,
             urebirthunlock: urebirthunlock,
+            perstigeunlock: prestigeunlock,
         },
         layerauto: {
             autopoints: autopoints,
@@ -44,7 +45,7 @@ Save : function() {
 Load : function() {
     data = JSON.parse(localStorage.getItem("save"));
     function LoadStat(path, stat) {
-        stat = path
+        if (typeof path !== "undefined") stat = path;
     };
     LoadStat(data.layers.points, points)
     LoadStat(data.layers.multiplier, multiplier)
