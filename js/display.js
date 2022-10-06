@@ -8,12 +8,14 @@ window.setInterval(function() {
 window.setInterval(function() {
     Check2("pointsleft", "multiunlockbtn", 100, points)
     Check("autopoints", 10, points)
+    Check("multibtn", 50, points)
 
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
 
-    UnlockBtnUpd("multisubtab", "multiunlockbtn", multiunlock)
+    Display("autopoints", autopoints, true)
+    BtnUpd("multisubtab", "multiunlockbtn", multiunlock)
 },150)
 
 window.setInterval(function() {
@@ -50,7 +52,7 @@ function Display(id, stat, inv) {
     }
 }
 
-function UnlockBtnUpd(id, id2, stat) {
+function BtnUpd(id, id2, stat) {
     if (stat == true) {
         document.getElementById(id).style.display = "inline"
         document.getElementById(id2).style.display = "none"
