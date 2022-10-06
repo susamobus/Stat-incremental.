@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+
+.tab {
+    display: none;
+}
+
+.PointDisplay {
+    font-size: 30px;
+}
+
+.TabBtn {
+    background-color: black;
+    border-color: white;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    height: 60px;
+    width: 120px;
+}
+
+.LayerBtn {
+    background-color: white;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100px;
+    width: 120px;
+}
+
+#Slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 5px;
+    border-radius: 3px;
+}
+
+#Slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    z-index: 3;
+    position: relative;
+}
+
+#SliderSelector {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    z-index: 2;
+}
+
+.SelectorBtn {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.HardResetBtn {
+    background-color: red;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    height: 60px;
+    width: 120px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="js/ExpantaNum.js"></script>
+        <script type="text/javascript" src="js/layers.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/display.js"></script>
+        <script type="text/javascript" src="js/save.js"></script>
+    </head>
+    <body onload="savefunctions.Load()">
+        <span class="PointDisplay">Points: <span id="points">Loading</span></span>
+        <br>
+        <br>
+        <button class="TabBtn" onclick="Tab('layers')">Layers</button>
+        <button class="TabBtn" onclick="Tab('settings')">Settings</button>
+        <br>
+        <br>
+        <div class="tab" id="layers" style="display: block">
+            <button class="LayerBtn" onclick="Start()">Start</button><br>
+        </div>
+
+        <div class="tab" id="settings">
+            <span>Autosave speed: <span id="SliderValue">100</span></span>
+            <input id="Slider" type="range" min="50" max="1000" value="100" oninput="SliderInput()">
+            <div id="SliderSelector">
+                <div class="SelectorBtn"></div>
+            </div>
+            <br>
+            <br>
+            <button class="HardResetBtn" onclick="savefunctions.HardReset()">Hard Reset</button>
+        </div>
+
+    </body>
+</html>
