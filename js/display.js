@@ -1,5 +1,6 @@
 window.setInterval(function() {
     document.getElementById("points").innerHTML = points
+    document.getElementById("pointsleft").innerHTML = 100-points
     document.getElementById("multiplier").innerHTML = multiplier
     document.getElementById("SliderSelector").style.left = autosavespeed + "%"
     document.getElementById("SliderValue").innerHTML = autosavespeed
@@ -10,7 +11,8 @@ window.setInterval(function() {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
     }
     if (multiunlock == true) {
-        document.getElementById("MultiSubTab").style.display = "inline"
+        document.getElementById("multisubtab").style.display = "inline"
+        document.getElementById("multiunlockbtn").style.display = "none"
     }
 },150)
 

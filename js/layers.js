@@ -4,12 +4,15 @@ var multiunlock = false
 var isnew = true
 
 function Start() {
-    points += 1
+    points += (1 * multiplier)
     isnew = false
 }
 
 function Multi() {
-    multiplier += 1
+    if (points >= 50) {
+        points -= 50
+        multiplier += 1
+    }
 }
 
 function MultiUnlock() {
