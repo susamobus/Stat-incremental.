@@ -30,7 +30,7 @@ Load : function() {
 
 HardReset : function() {
     points = 0
-    multiplier = 0
+    multiplier = 1
     isnew = true
     multiunlock = false
     savefunctions.Save()

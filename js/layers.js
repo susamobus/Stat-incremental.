@@ -1,5 +1,5 @@
 var points = 0
-var multiplier = 0
+var multiplier = 1
 var multiunlock = false
 var isnew = true
 
