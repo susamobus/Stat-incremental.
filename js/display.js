@@ -6,7 +6,8 @@ window.setInterval(function() {
 },50);
 
 window.setInterval(function() {
-    Check("pointsleft", "multiunlockbtn", 100, points)
+    Check2("pointsleft", "multiunlockbtn", 100, points)
+    Check("autopoints", 10, points)
 
     if (isnew == false) {
         document.getElementsByClassName("PointDisplay")[0].style.display = "inline"
@@ -22,7 +23,15 @@ window.setInterval(function() {
     }
 },200)
 
-function Check(id, id2, req, stat) {
+function Check(id, req, stat) {
+    if (stat >= req) {
+        document.getElementById(id).style.borderColor = "lime"
+    } else {
+        document.getElementById(id).style.borderColor = "red"
+    }
+}
+
+function Check2(id, id2, req, stat) {
     if (stat >= req) {
         document.getElementById(id).innerHTML = 0
         document.getElementById(id2).style.borderColor = "lime"

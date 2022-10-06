@@ -47,7 +47,7 @@ body {
     font-size: 20px;
     color: black;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 100px;
     width: 120px;
 }
@@ -58,8 +58,8 @@ body {
     color: black;
     border-color: red;
     padding: 10px;
-    border-radius: 10px;
-    height: 60px;
+    border-radius: 20px;
+    height: 80px;
     width: 120px;
 }
 
@@ -69,7 +69,7 @@ body {
     color: black;
     border-color: red;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 60px;
     width: 250px;
 }
