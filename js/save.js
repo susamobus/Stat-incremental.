@@ -21,21 +21,19 @@ Save : function() {
             autosavespeed: autosavespeed,
         }
     };
-    localStorage.setItem("save", JSON.stringify(save));
+    localforage.setItem("save", save);
 },
 
 Load : function() {
-    data = JSON.parse(localStorage.getItem("save"));
-    function LoadStat(path, stat) {
-        if (typeof path !== "undefined") stat = path;
-    };
-    LoadStat(data.layers.points, points)
-    LoadStat(data.layers.multiplier, multiplier)
-    LoadStat(data.layers.rebirth, rebirth)
-    LoadStat(data.layerunlocks.multiunlock, multiunlock)
-    LoadStat(data.layerunlocks.rebirthunlock, rebirthunlock)
-    LoadStat(data.layerauto.autopoints, autopoints)
-    LoadStat(data.settings.autosavespeed, autosavespeed)
+    data = localforage.getItem("save");
+    if (typeof data.layers.points !== "undefined") points = data.layers.points;
+    if (typeof data.layers.multiplier !== "undefined") multiplier = data.layers.multiplier;
+    if (typeof data.layers.rebirth !== "undefined") rebirth = data.layers.rebirth;
+    if (typeof data.layerunlocks.isnew !== "undefined") isnew = data.layerunlocks.isnew;
+    if (typeof data.layerunlocks.multiunlock !== "undefined") multiunlock = data.layerunlocks.multiunlock;
+    if (typeof data.layerunlocks.rebirthunlock !== "undefined") rebirthunlock = data.layerunlocks.rebirthunlock;
+    if (typeof data.layerauto.autopoints !== "undefined") autopoints = data.layerauto.autopoints;
+    if (typeof data.settings.autosavespeed !== "undefined") autosavespeed = data.settings.autosavespeed;
 },
 
 HardReset : function() {
@@ -65,5 +63,5 @@ HardReset : function() {
 
 window.setInterval(function() {
     savefunctions.Save()
-    document.getElementById("save").innerHTML = localStorage.getItem("save")
+    document.getElementById("save").innerHTML = localforage.getItem("save")
 },autosavespeed)

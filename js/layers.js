@@ -1,8 +1,8 @@
-var points = 0
-var multiplier = 1
-var rebirth = 0
-var ultrarebirth = 0
-var prestige = 0
+var points = "0"
+var multiplier = "1"
+var rebirth = "0"
+var ultrarebirth = "0"
+var prestige = "0"
 var multiunlock = false
 var rebirthunlock = false
 var urebirthunlock = false
@@ -12,14 +12,14 @@ var automulti = false
 var isnew = true
 
 function Start() {
-    points += (1 * multiplier)
+    points = ExpantaNum.add(ExpantaNum.mul(1,multiplier),points).toString()
     isnew = false
 }
 
 function Multi() {
-    if (points >= 50) {
-        points -= 50
-        multiplier += (1 * (rebirth + 1))
+    if (ExpantaNum.gt(points,50)) {
+        points = ExpantaNum.sub(points,50).toString()
+        multiplier = ExpantaNum.add(multiplier,ExpantaNum.mul(1,ExpantaNum.add(rebirth,1))).toString()
     }
 }
 

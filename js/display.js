@@ -27,12 +27,12 @@ window.setInterval(function() {
 
 window.setInterval(function() {
     if (autopoints == true) {
-        points += (1 * multiplier)
+        points = ExpantaNum.add(points,multiplier)
     }
 },100)
 
 function Check(id, req, stat) {
-    if (stat >= req) {
+    if (ExpantaNum.gte(stat,req)) {
         document.getElementById(id).style.borderColor = "lime"
     } else {
         document.getElementById(id).style.borderColor = "red"
@@ -40,7 +40,7 @@ function Check(id, req, stat) {
 }
 
 function Check2(id, id2, req, stat) {
-    if (stat >= req) {
+    if (ExpantaNum.gte(stat,req)) {
         document.getElementById(id).innerHTML = 0
         document.getElementById(id2).style.borderColor = "lime"
     } else {
