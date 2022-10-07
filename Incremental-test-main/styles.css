@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
+
+body {
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+.SusButton {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 100px;
+    width: 120px;
+}
+.CrewmateButton {
+    background-color: lightblue;
+    color: rgb(0, 0, 102);
+    padding: 10px;
+    border-radius: 10px;
+    font: "Dosis";
+    font-size: 10px;
+    height: 110px;
+    width: 128px;
+}
+.ImpostorButton {
+    background-color: rgb(255, 192, 192);
+    color: rgb(99, 0, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 110px;
+    width: 128px;
+}
+.SusText {
+    color: red;
+    font-size: 20px;
+}
+.SusTextDisplayed {
+    color: rgb(255,0,25.5);
+    font-size: 20px;
+}
+.AmogusText {
+    color: darkred;
+    font-size: 20px;
+}
+.CrewmateText {
+    color: aqua;
+    font-size: 20px;
+}
+.ImpostorText {
+    color:crimson;
+    font-size: 20px;
+}
+.RestartButton {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 40px;
+    width: 80px;
+}
+.FixSusGainButton {
+    background-color: greenyellow;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    height: 40px;
+    width: 80px;
+}
+.SelectButton1 {
+    background-color: greenyellow;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 8px;
+    height: 50px;
+    width: 60px;
+}
+.SelectButton2 {
+    background-color: lightskyblue;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 8px;
+    height: 50px;
+    width: 60px;
+}
+.NotationButton1 {
+    background-color: royalblue;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 8px;
+    height: 50px;
+    width: 60px;
+}
+.NotationButton2 {
+    background-color: lightsteelblue;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 8px;
+    height: 50px;
+    width: 60px;
+}
+.UnlockTokensButton {
+    background-color: rgb(255, 196, 0);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 128px;
+    width: 144px;
+    display: none;
+}
+.TokensText2 {
+    color: rgb(255, 196, 0);
+    font-size: 20px;
+    display: none;
+}
+.TokensPanelHeader {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: none;
+}
+.TokensText1 {
+    color: white;
+    font-size: 20px;
+    display: none;
+}
+.TokensButtons {
+    background-color: rgb(255, 196, 0);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
+.ShowTokensUpgradesPanel {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
+.TokenUpgradesPanel {
+    background-color: rgb(89, 89, 89);
+    border-color: rgb(255, 196, 0);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 10px;
+    height: 400px;
+    width: 550px;
+    display: none;
+}
+.TokenPageButtons {
+    background-color: rgb(255, 196, 0);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
+.TokenUpgradeButtons {
+    background-color: rgb(136, 255, 0);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
+.TokenBuyableButtons {
+    background-color: rgb(0, 208, 255);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
+.TokenUnlockButtons {
+    background-color: rgb(230, 0, 255);
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 100px;
+    width: 112px;
+    display: none;
+}
+

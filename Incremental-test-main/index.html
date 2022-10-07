@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+        <script type="text/javascript" src="test.js"></script>
+        <script src="numhandler/ExpantaNum.js"></script>
+        <script type="text/javascript" src="numhandler/notations.js"></script>
+        <script type="text/javascript" src="features/tokens.js"></script>
+        <script type="text/javascript" src="mechanics/saveandload.js"></script>
+        <style>
+            body {
+  font-family: "Dosis", sans-serif;
+            }
+        </style>
+    </head>
+    <body onload = "saveandload.Load()">
+        <button class="SelectButton1" onClick="Mode(0)">Convert 1 each</button>
+        <button class="SelectButton2" onClick="Mode(1)">Convert all at once</button>
+        <button class="NotationButton1" onClick="Notation(1)">Suffixes Notation</button>
+        <button class="NotationButton2" onClick="Notation(2)">Scientific Notation</button>
+        <p><span>Mode: <span id="mode">Loading</span></span></p>
+        <p><span>Notation: <span id="notation">Loading</span></span></p>
+        <button class="SusButton" onClick="Amogus()"><span id="amoguscost">0</span> sus to <span id="amogusamount">1</span> amogus (2x sus)</button>
+        <p>Sus : <span class="SusTextDisplayed" id="displayedsus">displayedsus</span></p>
+        <p>Amogus : <span class="AmogusText" id="amogus">amogus</span></p>
+        <button class="CrewmateButton" onClick="Crewmate()">Reset all amogus for <span id="crewmateamount">0</span> crewmate. Requires <span id="crewmatecost">0</span></button>
+        <p>Crewmate : <span class="CrewmateText" id="crewmate">crewmate</span></p>
+        <button class="ImpostorButton" onClick="Impostor()">Reset all crewmate for <span id="impostoramount">0</span> impostor. Requires <span id="impostorcost">0</span></button>
+        <p>Impostor : <span class="ImpostorText" id="impostor">impostor</span></p>
+        <button class="RestartButton" onClick="saveandload.Restart()">Reset Progress</button>
+        <button class="RestartButton" onClick="Test()">Test</button>
+        <button class="FixSusGainButton" onClick="doneloading()">Fix Sus Gain</button>
+        <button id = "unlocktokens" class="UnlockTokensButton" onClick="unlock('tokens',1e15)">Unlock Tokens, require 1Qd Sus</button>
+        <p><span id = tokenstext1 class = TokensText1>Tokens :</span><span class="TokensText2" id="tokenstext2">tokens</span></p>
+        <button id = "tokensbutton1" class="TokensButtons" onClick="tokenfuncs.addtokens(1)"><span id="tokenscost1">0</span> sus for <span id="tokensgain1">0</span> tokens</button>
+        <button id = "tokensbutton2" class="TokensButtons" onClick="tokenfuncs.addtokens(2)"><span id="tokenscost2">0</span> sus for <span id="tokensgain2">0</span> tokens</button>
+        <button id = "tokensbutton3" class="TokensButtons" onClick="tokenfuncs.addtokens(3)"><span id="tokenscost3">0</span> sus for <span id="tokensgain3">0</span> tokens</button>
+        <button id = "pagebuttonF" class="TokenPageButtons" onClick="tokenfuncs.addpage(1)">Forward Page</button>
+        <button id = "pagebuttonB" class="TokenPageButtons" onClick="tokenfuncs.addpage(-1)">Backward Page</button>
+        <button class = "ShowTokensUpgradesPanel" onClick="upgradepanel('tokens')">Upgrades</button>
+        <br>
+        <div class = "TokenUpgradesPanel" id = "tokensupgradespanel">
+            <h1 class = "TokensPanelHeader">Token Upgrades</h1>
+            <br>
+            <button class = "TokenUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('tokenpages',1,1,200)">Unlock Token Pages<br>Cost: 200 Tokens</button>
+            <button class = "TokenBuyableButtons" onClick = "tokenfuncs.tokensupgrading('moresus1',1,2,100,2.5,11)">1.35x more sus<br>Cost: <span class = "costtext">100</span> Tokens</button>
+            <button class = "TokenUnlockButtons" onClick = "tokenfuncs.tokensupgrading('unlock1',1,3,1000)">Unlock 2 upgrades<br>Cost: 1000 Tokens</button>
+            <button class = "TokenBuyableButtons" onClick = "tokenfuncs.tokensupgrading('morecrewmate1',2,2,1000,7,7)">1.1x more crewmate<br>Cost: <span class = "costtext">1000</span> Tokens</button>
+            <button class = "TokenUpgradeButtons" onClick = "tokenfuncs.tokensupgrading('susboost1',2,1,1e11)">Tokens Boosts Sus gain<br>Cost: <span class = "costtext">100B</span> Tokens</button>
+        </div>
+
+    </body>
+</html>
