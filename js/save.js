@@ -65,4 +65,5 @@ HardReset : function() {
 
 window.setInterval(function() {
     savefunctions.Save()
+    document.getElementById("save").innerHTML = localStorage.getItem("save")
 },autosavespeed)
