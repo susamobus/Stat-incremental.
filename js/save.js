@@ -8,32 +8,14 @@ Save : function() {
             points: points,
             multiplier: multiplier,
             rebirth: rebirth,
-            ultrarebirth: ultrarebirth,
-            prestige: prestige,
         },
         layerunlocks: {
             isnew: isnew,
             multiunlock: multiunlock,
             rebirthunlock: rebirthunlock,
-            urebirthunlock: urebirthunlock,
-            prestigeunlock: prestigeunlock,
         },
         layerauto: {
             autopoints: autopoints,
-            automulti: automulti,
-        },
-        tokens: {
-            tokens: tokens,
-            supertokens: supertokens,
-            megatokens: megatokens,
-        },
-        tokensunlock: {
-            tokensunlock: tokensunlock,
-            stokensunlock: stokensunlock,
-            mtokensunlock: mtokensunlock,
-        },
-        tokensauto: {
-            autotokens: autotokens,
         },
         settings: {
             autosavespeed: autosavespeed,
@@ -50,21 +32,9 @@ Load : function() {
     LoadStat(data.layers.points, points)
     LoadStat(data.layers.multiplier, multiplier)
     LoadStat(data.layers.rebirth, rebirth)
-    LoadStat(data.layers.ultrarebirth, ultrarebirth)
-    LoadStat(data.layers.prestige, prestige)
     LoadStat(data.layerunlocks.multiunlock, multiunlock)
     LoadStat(data.layerunlocks.rebirthunlock, rebirthunlock)
-    LoadStat(data.layerunlocks.urebirthunlock, urebirthunlock)
-    LoadStat(data.layerunlocks.prestigeunlock, prestigeunlock)
     LoadStat(data.layerauto.autopoints, autopoints)
-    LoadStat(data.layerauto.automulti, automulti)
-    LoadStat(data.tokens.tokens, tokens)
-    LoadStat(data.tokens.supertokens, supertokens)
-    LoadStat(data.tokens.megatokens, megatokens)
-    LoadStat(data.tokensunlock.tokensunlock, tokensunlock)
-    LoadStat(data.tokensunlock.stokensunlock, stokensunlock)
-    LoadStat(data.tokensunlock.mtokensunlock, mtokensunlock)
-    LoadStat(data.tokensauto.autotokens, autotokens)
     LoadStat(data.settings.autosavespeed, autosavespeed)
 },
 
