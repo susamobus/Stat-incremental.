@@ -16,7 +16,7 @@ Save : function() {
             multiunlock: multiunlock,
             rebirthunlock: rebirthunlock,
             urebirthunlock: urebirthunlock,
-            perstigeunlock: prestigeunlock,
+            prestigeunlock: prestigeunlock,
         },
         layerauto: {
             autopoints: autopoints,
