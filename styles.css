@@ -43,19 +43,19 @@ body {
 .TabBtnGroup {
     background-color: yellow;
     position: fixed;
-    height: 120%;
+    height: 108%;
     width: 200px;
     left: 0;
-    top: -20%;
+    top: -8%;
 }
 
 .SubTabBtnGroup {
     background-color: lightyellow;
     position: fixed;
-    height: 120%;
+    height: 108%;
     width: 150px;
     left: 200px;
-    top: -20%;
+    top: -8%;
 }
 
 .LayerBtn {
