@@ -5,11 +5,11 @@ var saveandload = {
 Save : function() {
     save = {
      mainlayers : { 
-        sus: sus,
-        amogus: amogus,
-        crewmate: crewmate,
-        impostor: impostor,
-        lifetimesus: lifetimesus,
+        points: points,
+        multiplier: multiplier,
+        rebirth: rebirth,
+        ultrarebirth: ultrarebirth,
+        lifetimepoints: lifetimepoints,
         },
      tokensfeature : {
         tokenvarssave: tokenvars
@@ -22,21 +22,21 @@ Save : function() {
 },
 Load : function() {
     saveddata = JSON.parse(localStorage.getItem("save"));
-    if (typeof saveddata.mainlayers.sus !== "undefined") sus = saveddata.mainlayers.sus;
-    if (typeof saveddata.mainlayers.amogus !== "undefined") amogus = saveddata.mainlayers.amogus;
-    if (typeof saveddata.mainlayers.crewmate !== "undefined") crewmate = saveddata.mainlayers.crewmate;
-    if (typeof saveddata.mainlayers.impostor !== "undefined") impostor = saveddata.mainlayers.impostor;
-    if (typeof saveddata.mainlayers.lifetimesus !== "undefined") lifetimesus = saveddata.mainlayers.lifetimesus;
+    if (typeof saveddata.mainlayers.points !== "undefined") points = saveddata.mainlayers.points;
+    if (typeof saveddata.mainlayers.multiplier !== "undefined") multiplier = saveddata.mainlayers.multiplier;
+    if (typeof saveddata.mainlayers.rebirth !== "undefined") rebirth = saveddata.mainlayers.rebirth;
+    if (typeof saveddata.mainlayers.ultrarebirth !== "undefined") ultrarebirth = saveddata.mainlayers.ultrarebirth;
+    if (typeof saveddata.mainlayers.lifetimepoints !== "undefined") lifetimepoints = saveddata.mainlayers.lifetimepoints;
     if (typeof saveddata.featuresunlocked.unlocks !== "undefined") unlocks = saveddata.featuresunlocked.unlocks;
     if (typeof saveddata.tokensfeature !== "undefined") tokenvars = saveddata.tokensfeature.tokenvarssave;
     saveandload.LoadButtons()
 },
 Restart : function() {
-  sus = 0
-  amogus = 0
-  crewmate = 0
-  impostor = 0
-  liftimesus = 0
+  points = 0
+  multiplier = 0
+  rebirth = 0
+  ultrarebirth = 0
+  liftimepoints = 0
   tokenvars.tokens = 0
   saveddata = {};
   localStorage.setItem("saveddata", JSON.stringify(saveddata))
