@@ -26,9 +26,9 @@ var tokenfuncs = {
       },
      addtokens : function(buttonorder) {
         let cost = ExpantaNum.mul(ExpantaNum.pow(5,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))),5e15)
-      if (ExpantaNum.gte(points,cost) == true) {
+      if (ExpantaNum.gte(mainlayersvars.points,cost) == true) {
         tokenvars.tokens = ExpantaNum.add(tokenvars.tokens,ExpantaNum.pow(3,ExpantaNum.add(ExpantaNum.sub(buttonorder,1),ExpantaNum.mul(ExpantaNum.sub(tokenvars.tokenspage,1),3))))
-        points = ExpantaNum.sub(points,cost)
+        mainlayersvars.points = ExpantaNum.sub(mainlayersvars.points,cost)
       }
     },
     getTokensCost : function(buttonorder) {
@@ -42,7 +42,7 @@ var tokenfuncs = {
        tokenvars.tokenspage = ExpantaNum.add(tokenvars.tokenspage,increment)
     }},
     tokenbuttonsrefresh : function() {
-      if ((ExpantaNum.gte(lifetimepoints,5e14) == true) && (unlocks.includes("tokens") !== true) == true) {
+      if ((ExpantaNum.gte(mainlayersvars.lifetimepoints,5e14) == true) && (unlocks.includes("tokens") !== true) == true) {
         document.getElementById("unlocktokens").style.display = "inline"
       } else {
         document.getElementById("unlocktokens").style.display = "none"
